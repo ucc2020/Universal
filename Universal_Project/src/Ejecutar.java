@@ -7,8 +7,8 @@ public class Ejecutar {
 
     public static void main(String[] args) {
         
-        ArrayList<Producto> prod = new ArrayList<>();
-        ArrayList<Pedido> ped = new ArrayList<>();
+        ArrayList<Producto> prod = new ArrayList();
+        ArrayList<Pedido> ped = new ArrayList();
   
         int opcion =0;
         int opc =0;
@@ -39,7 +39,6 @@ public class Ejecutar {
                     }while(opc !=2);
                     
                     ped.add(ped1);
-                    prod.clear();
                     break;
                     
                 case 2:
