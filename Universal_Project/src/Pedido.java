@@ -24,15 +24,8 @@ public class Pedido {
         this.total = total;
         this.con_pago = con_pago;
     }
-
-   public void CrearPedido(){
-       
-   Pedido p1 = new Pedido(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite id pedido:")), 
-           Integer.parseInt(JOptionPane.showInputDialog(null, "Digite Tipo documento:")), ven, prod, clien, fecha, total, con_pago);
     
-       
-   
-}
+ 
 
     @Override
     public String toString() {
