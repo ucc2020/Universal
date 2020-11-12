@@ -8,28 +8,24 @@ public class Pedido {
     private int id_pedido;
     private int tipo_doc;
     private Vendedor ven;
-    private ArrayList<Producto> prod;
     private Cliente clien;
     private int fecha;
-    private float total;
     private String con_pago;
 
-    public Pedido(int id_pedido, int tipo_doc, Vendedor ven, ArrayList<Producto> prod, Cliente clien, int fecha, float total, String con_pago) {
+    public Pedido(int id_pedido, int tipo_doc, Vendedor ven, Cliente clien, int fecha, String con_pago) {
         this.id_pedido = id_pedido;
         this.tipo_doc = tipo_doc;
         this.ven = ven;
-        this.prod = prod;
         this.clien = clien;
         this.fecha = fecha;
-        this.total = total;
         this.con_pago = con_pago;
     }
-    
- 
 
     @Override
     public String toString() {
-        return "Pedido{" + "id_pedido=" + id_pedido + ", tipo_doc=" + tipo_doc + ", ven=" + ven + ", prod=" + prod + ", clien=" + clien + ", fecha=" + fecha + ", total=" + total + ", con_pago=" + con_pago + '}';
+        return "Pedido{" + "id_pedido=" + id_pedido + ", tipo_doc=" + tipo_doc + ", ven=" + ven + ", clien=" + clien + ", fecha=" + fecha + ", con_pago=" + con_pago + '}';
     }
-    
+
+   
+   
 }

@@ -14,6 +14,15 @@ public class Producto {
         this.cant = cant;
         this.precio = precio;
     }
+    
+    public Double totalP(){
+        int a;
+        double b,c;
+       a = this.cant;
+       b = this.precio;
+       c= a*b;
+       return c;
+    }
 
     public int getCod_producto() {
         return cod_producto;
