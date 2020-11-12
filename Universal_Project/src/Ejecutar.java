@@ -31,19 +31,44 @@ public class Ejecutar {
                     String a,b;
                                 
                     Scanner teclado = new Scanner(System.in);
-                    Vendedor vend1 = new Vendedor(235, 789, "santi", "cali", "rivera", 963, "calle 62", "santi@", 120389);
-                    Cliente cl1 = new Cliente(896, "cris", "pereira", "depart", 8446, "calle11", "sm@", 120996);
-                    Pedido ped1 = new Pedido(123, 321, vend1, cl1, 120520,"tc"); 
+                    JOptionPane.showMessageDialog(null, "Digitar Datos Vendedor");
+                    Vendedor vend1 = new Vendedor(Integer.parseInt(JOptionPane.showInputDialog("Digite Codigo de Vendedor")),
+                             Integer.parseInt(JOptionPane.showInputDialog("Digite ID Vendedor")), 
+                             JOptionPane.showInputDialog("Digite Nombre Vendedor"), 
+                             JOptionPane.showInputDialog("Digite Ciudad"), 
+                             JOptionPane.showInputDialog("Digite Barrio"), 
+                             Integer.parseInt(JOptionPane.showInputDialog("Digite Telefono")), 
+                             JOptionPane.showInputDialog("Digite Direccion"), 
+                             JOptionPane.showInputDialog("Digite Correo"),
+                             Integer.parseInt(JOptionPane.showInputDialog("Digite Fecha Ingreso")));
+                    JOptionPane.showMessageDialog(null, "Digitar Datos Cliente");
+                    Cliente cl1 = new Cliente(Integer.parseInt(JOptionPane.showInputDialog("Digite ID Cliente")),
+                            JOptionPane.showInputDialog("Digite Nombre Cliente"), 
+                            JOptionPane.showInputDialog("Digite Ciudad"),
+                            JOptionPane.showInputDialog("Digite Barrio"), 
+                            Integer.parseInt(JOptionPane.showInputDialog("Digite Telefono")),
+                            JOptionPane.showInputDialog("Digite Direccion"),
+                            JOptionPane.showInputDialog("Digite Correo"), 
+                            Integer.parseInt(JOptionPane.showInputDialog("Digite Fecha Ingreso")));
+                    JOptionPane.showMessageDialog(null, "Crear Pedido");
+                    Pedido ped1 = new Pedido(Integer.parseInt(JOptionPane.showInputDialog("Digite ID Pedido")),
+                            JOptionPane.showInputDialog("Digite Tipo Pedido"), vend1, cl1, 
+                            Integer.parseInt(JOptionPane.showInputDialog("Digite Fecha Pedido")),
+                            JOptionPane.showInputDialog("Digite Condicion Pago")); 
                     do {
                         opc = Integer.parseInt(JOptionPane.showInputDialog("1. Agregar producto\n" + "2. Salir\n"));
                         switch(opc){
                             case 1:
-                                Linea lin = new Linea(8999, "Papeleria");
-                                Producto prod1 = new Producto(155, lin, "Lapices", 15, 2500);
+                                Linea lin = new Linea(Integer.parseInt(JOptionPane.showInputDialog("Digite Codigo Linea")),
+                                JOptionPane.showInputDialog("Digite Nombre Linea"));
+                                Producto prod1 = new Producto(Integer.parseInt(JOptionPane.showInputDialog("Digite ITEM")), lin, 
+                                       JOptionPane.showInputDialog("Digite Descripcion Producto"),
+                                       Integer.parseInt(JOptionPane.showInputDialog("Digite La cantidad")) , 
+                                       Double.parseDouble(JOptionPane.showInputDialog("Valor UND Producto")));
                                 
                                 suma=prod1.totalP();
                                 total = total+suma;
-                                JOptionPane.showMessageDialog(null, total);
+                               
                                 a=prod1.toString()+total;
                                 miLista2.listaProd.add(a);
                                 break;
