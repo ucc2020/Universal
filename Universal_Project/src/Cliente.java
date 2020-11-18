@@ -18,7 +18,8 @@ public class Cliente extends Persona{
 
     @Override
     public String toString() {
-        return "Cliente{" + "id_cliente=" + id_cliente + '}';
+        return "Datos Cliente:\n" + "ID: " + id_cliente + ", Nombre: " + super.getNombre() + ", Ciudad: " + super.getCiudad() + ", Barrio: " + super.getBarrio()
+                                  + "\nTelefono: " + super.getTelefono() + ", Direccion: " + super.getDireccion() + ", Correo: " + super.getCorreo() + ", Fecha Ingreso: " + super.getFech_ingreso(); 
     }
     
 }

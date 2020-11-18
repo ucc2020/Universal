@@ -28,7 +28,7 @@ public class Vendedor extends Persona {
 
     @Override
     public String toString() {
-        return "Vendedor{" + "cod_vend=" + cod_vend + ", id=" + id + '}';
+        return "Vendedor:" + " Cod: " + cod_vend + ", ID:" + id + ", Nombre: " + super.getNombre();
     }
     
 }

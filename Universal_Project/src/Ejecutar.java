@@ -69,7 +69,7 @@ public class Ejecutar {
                                 suma=prod1.totalP();
                                 total = total+suma;
                                
-                                a=prod1.toString()+total;
+                                a=prod1.toString()+ ", Total:" + total + ".\n";
                                 miLista2.listaProd.add(a);
                                 break;
                         }
@@ -81,7 +81,16 @@ public class Ejecutar {
                     break;
                     
                 case 2:
-                    
+                    String el;
+                    el = JOptionPane.showInputDialog("Digite el N° Pedido a Elminar");
+                    for(int i=0;i<miLista.listaPed.size();i++){
+                        if(miLista.listaPed.get(i).contains(el)){
+                            miLista.listaPed.remove(i);
+                            JOptionPane.showMessageDialog(null, "Pedido Eliminado");
+                        }else{
+                            JOptionPane.showMessageDialog(null, "Pedido no encontrado");
+                        }
+                    }
                     break;
                     
                 case 3:

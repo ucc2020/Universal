@@ -23,9 +23,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" + "id_pedido=" + id_pedido + ", tipo_doc=" + tipo_doc + ", ven=" + ven + ", clien=" + clien + ", fecha=" + fecha + ", con_pago=" + con_pago + '}';
+        return "ID Pedido: " + id_pedido + ", Tipo: " + tipo_doc + ", Fecha: " + fecha + ".\n" + ven + ".\n" + clien + ".\nCondición Pago: " + con_pago + "\n";
     }
 
-   
-   
 }

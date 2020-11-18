@@ -27,7 +27,7 @@ public class Linea {
 
     @Override
     public String toString() {
-        return "Linea{" + "cod_linea=" + cod_linea + ", nom_linea=" + nom_linea + '}';
+        return "Cod. Linea: " + cod_linea + ", Nombre Linea: " + nom_linea;
     }
    
 }
